@@ -59,10 +59,10 @@
           <li>Warna papan rak pink, selebih nya warna putih</li>
           <li>Tebal papan rak 2cm</li>
           <li>Semua bidang kontak antar kayu agar diberi lem PU</li>
-          
-          
-        </ol> 
-        
+
+
+        </ol>
+
         <p><br /></p>
       </div>
 
@@ -97,7 +97,10 @@
       //viewer.setTheme('dark-theme');
       viewer.setLightPreset('Contrast');
       viewer.navigation.setReverseZoomDirection(true);
-      viewer.loadModel('armario_rosada.glb');
+      viewer.loadExtension('Autodesk.glTF').then(() => {
+        viewer.loadModel('armario_rosada.glb');
+      });
+
     });
 
 
@@ -108,7 +111,7 @@
       theme: "snow",
     });
 
-    
+
   </script>
 
   <script type="module">
